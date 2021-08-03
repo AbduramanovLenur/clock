@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    background-image: url(img/fonClock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.clock::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    z-index: 10;
+    top: calc(50% - 7px);
+    left: calc(50% - 7px)
+}
+
+.min, 
+.hour, 
+.sec  {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hour {
+    width: 160px;
+    height: 160px;
+    top: calc(50% - 80px);
+    left: calc(50% - 80px);
+}
+
+.hour::after {
+    content: '';
+    width: 8px;
+    height: 80px;
+    background-color: rgb(99, 67, 67);
+    border-radius: 4px 4px 0 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.min {
+    width: 200px;
+    height: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.min::after {
+    content: '';
+    width: 4px;
+    height: 100px;
+    background-color: rgb(99, 67, 67);
+    border-radius: 4px 4px 0 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.sec {
+    width: 250px;
+    height: 250px;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+}
+
+.sec::after {
+    content: '';
+    width: 2px;
+    height: 125px;
+    background-color: rgb(99, 67, 67);
+    border-radius: 4px 4px 0 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
