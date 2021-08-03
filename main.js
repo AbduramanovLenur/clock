@@ -13,8 +13,6 @@ function fooTime() {
 
 setInterval(fooTime, 1000);
 
-//--------------------------------------------------------------------------------------
-
 const h = document.querySelector('.hour');
 const m = document.querySelector('.min');
 const s = document.querySelector('.sec');
